@@ -32,9 +32,9 @@ func count10() {
 }
 
 func checkNew() {
-	resp, err := http.Get("http://localhost:8080/paragliding/api/ticker/latest")
+	resp, err := http.Get("https://pkbuer-paragliding.herokuapp.com/paragliding/api/ticker/latest")
 	if err != nil {
-		fmt.Println("Failed to get latest ticker")
+		fmt.Printf("Failed to get latest ticker %s", err)
 		return
 	}
 	defer resp.Body.Close()
